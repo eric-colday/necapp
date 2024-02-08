@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "restoAppNecDev",
+    "slug": "resto-app-nec-dev",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "restoapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ericcolday.restoAppNecDev",
+      "buildNumber": "10",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Autoriser NecApp à utiliser votre localisation pour vous proposer les restaurants près de chez vous."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.ericcolday.restoApp"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Autoriser NecApp à accèder à vos photos pour vous permettre d'ajouter une photo de profil.",
+          "cameraPermission": "Autoriser NecApp à accèder à votre camera pour vous permettre de prendre une photo de profil."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Autoriser $(PRODUCT_NAME) à utiliser votre localisation pour vous proposer les restaurants près de chez vous."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": ""
+      }
+    }
+  }
+}
